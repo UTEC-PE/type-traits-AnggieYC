@@ -28,27 +28,60 @@ class DList {
         };
 
         void push_front(T data) {
-            // TODO
+			Node <T>* temp = new Node <T>;
+			temp->data = data;
+			if (head == NULL) { 
+				head = tail = temp; 
+				temp->prev = temp->next = NULL;
+			}
+			else {
+				temp->next = head;
+				head->prev = temp;
+				head->temp;
+			}
+		
         }
 
         void push_back(T data) {
-            // TODO
+			Node <T>* temp = new Node <T>;
+			temp->data = data;
+			if (head == NULL) {
+				head = tail = temp;
+				temp->prev = temp->next = NULL;
+			}
+			else {
+				tail->next = temp;
+				temp->prev = tail;
+				temp->next = NULL;
+				tail->temp;
+			}
         }
              
         void pop_front() {
-            // TODO
+			if (head != NULL) {
+				Node <T>* temp = head;
+				head->next;
+				delete temp;
+			}
+			else throw "Lista vacía";
         }
              
         void pop_back() {
-            // TODO
+			if (head == NULL) throw "Lista Vacía";
+			else {
+				Node <T>* temp = tail;
+				temp->prev->next = NULL;
+				tail = tail->prev;
+				delete temp;
+			}
         }
              
         iterator begin() {
-            // TODO
+			return Iterator<T>(head);
         }
              
         iterator end() {
-            // TODO
+			return Iterator<T>(tail);
         }
              
         ~DList() {
