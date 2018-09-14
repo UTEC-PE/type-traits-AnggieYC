@@ -8,7 +8,7 @@ class SListIterator : public Iterator<T> {
     public: 
         SListIterator() : Iterator<T>() {};
         SListIterator(Node<T> *current) : Iterator<T>(current) {};
-        SListIterator<T> operator++();
+        SListIterator<T> operator++(); // No Implementaste el iterador, esto no va a compilar
 };
 
 template <typename Tr>
@@ -72,7 +72,7 @@ class SList {
         }
              
         iterator end() {
-            // TODO
+            // TODO // Solo es un iterator a null
         }
              
         ~SList() {

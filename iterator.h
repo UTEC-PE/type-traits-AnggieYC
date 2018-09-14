@@ -14,7 +14,7 @@ class Iterator {
              
 		Iterator<T> operator=(Iterator<T> other) {
 			current = other.current;
-			return *current;
+			return *current; // Aquí se retorna *this, esto va a dar error
 		};
 		bool operator!=(Iterator<T> other) {
 			return(current != other.current);

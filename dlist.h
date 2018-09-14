@@ -9,7 +9,7 @@ class DListIterator : public Iterator<T> {
         DListIterator() : Iterator<T>() {};
         DListIterator(Node<T> *current) : Iterator<T>(current) {};
         DListIterator<T> operator++();
-        DListIterator<T> operator--();
+        DListIterator<T> operator--(); // No implementaste el iterador, esto no compila
 };
 
 template <typename Tr>
@@ -63,11 +63,11 @@ class DList {
 				head->next;
 				delete temp;
 			}
-			else throw "Lista vacía";
+			else throw "Lista vacï¿½a";
         }
              
         void pop_back() {
-			if (head == NULL) throw "Lista Vacía";
+			if (head == NULL) throw "Lista Vacï¿½a";
 			else {
 				Node <T>* temp = tail;
 				temp->prev->next = NULL;
